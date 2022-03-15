@@ -83,8 +83,38 @@ public class djikstra {
         
         double min = Double.POSITIVE_INFINITY;
         int select = 0;
+
+        /*    for(int i=0;i<ensemble1.size();i++){
+                for(int j=0;j<getNodebynum(ensemble1.get(i)).arretes.size();j++){
+
+
+                }
+
+
+            }*/
+
+           /* int i = 0;
+            while(ensemble1.contains(listeArretes.get(i).debut.num) && ensemble2.contains(listeArretes.get(i).fin.num)){
+                if(listeArretes.get(i).debut.distance_min + listeArretes.get(i).distance < listeArretes.get(i).fin.distance_min){
+                listeArretes.get(i).fin.distance_min=listeArretes.get(i).debut.distance_min + listeArretes.get(i).distance;
+                System.out.println(listeArretes.get(i).fin.num);
+                System.out.println(listeArretes.get(i).fin.distance_min);
+                }
+            
+                if(listeArretes.get(i).fin.distance_min<min){
+                    min=listeArretes.get(i).fin.distance_min;
+                    select = listeArretes.get(i).fin.num;
+                }
+                if(!ensemble1.contains(select)){
+                ensemble1.add(select);
+                ensemble2.remove(select);
+                }
+                i++;
+            }
+            */
         
-        
+            //while(!ensemble1.isEmpty()&&!ensemble2.isEmpty()){
+
             for(int i=0; i<listeArretes.size();i++){
                 
                 if(ensemble1.contains(listeArretes.get(i).debut.num) && ensemble2.contains(listeArretes.get(i).fin.num)){
@@ -94,27 +124,25 @@ public class djikstra {
                     System.out.println(listeArretes.get(i).fin.distance_min);
                     }
                 }
-
-                
                 if(listeArretes.get(i).fin.distance_min<min){
-                    min=listeArretes.get(i).fin.distance_min;
-                    select = listeArretes.get(i).fin.num;
+                        min=listeArretes.get(i).fin.distance_min;
+                        select = listeArretes.get(i).fin.num;
                 }
                 if(!ensemble1.contains(select)){
-                ensemble1.add(select);
-                ensemble2.remove(select);
+                    ensemble1.add(select);
+                    ensemble2.remove(select);
                 }
             
-            }
+                
             
-            
+            }  
 
             /*for(int i=1;i<=listenode.size();i++){
                 System.out.println(getNodebynum(i).distance_min);
             }
             */
         
-    }
+        }
     
 
 }
